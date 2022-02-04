@@ -45,9 +45,25 @@ void dataTypes()
     std::cout << ( double( age) > gpa);
 }
 
+
+/*
+* working with strings
+*/
+void stringManipulations()
+{
+
+    std::string phrase = "Hello world!\n";
+    std::cout << phrase << std::endl;
+    std::cout << phrase.length() << std::endl;
+    std::cout << phrase[0] << std::endl;
+    phrase[1] = 'B';
+    std::cout << phrase << std::endl;
+    std::cout << phrase.find("Bllo", 1) << std::endl;
+}
+
 int main()
 {
-    dataTypes();
+    stringManipulations();
     return 0;
 }
 
