@@ -5,7 +5,35 @@
 #include <string>
 using namespace std;
 
-int main(){
+double calculate(int a, int b, char op) {
+    int result;
+    if (op == '+') {
+        // add
+        result = a + b;
+    }
+    else if (op == '-') {
+        // sub
+        result = a - b;
+    }
+    else if (op == '*') {
+        // mult
+        result = a * b;
+    }
+    else if (op == '/') {
+        // div
+        result = a / b;
+    }
+    else {
+        // op is not supported
+        cout << "Operations not supported!\n";
+        // throw new exceptions("Not supported");
+        return 0;
+    }
+
+    return result;
+}
+
+void oldCalc() {
     double num1, num2;
     cout << "Enter first number: ";
     cin >> num1;
@@ -14,6 +42,11 @@ int main(){
     cin >> num2;
 
     cout << num1 + num2;
+}
+
+int main(){
+    
+    cout << calculate(10, 20, '%');
 
     return 0;
 }
