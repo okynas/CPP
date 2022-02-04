@@ -79,15 +79,42 @@ void userInput() {
 
     // cout << "Your age is " << age << " years old";
 
-    cout << "Enter your name";
+    cout << "Enter your name: ";
     getline(cin, name);
-    cout << "Hello " << name;
-
+    cout << "Hello " << name << "\n";
 }
 
-int main()
-{
-    userInput();
+void arrays() {
+    int luckyNumbers[] = {4,8,16,32,64,128,256,512};
+    cout << luckyNumbers[1] << "\n";
+
+    luckyNumbers[1] = 22222;
+    cout << luckyNumbers[1] << "\n";
+}
+
+void sayHi(string name, int age) {
+ cout << "Hello, My name is " << name << ", and I am " << age << " years old!" << "\n";
+}
+
+double result(int a, int b) {
+    return a * b;
+}
+
+void ifStatements(int a, int b) {
+    if (a > b) {
+        cout << "A is greate than B \n";
+    }
+    else if (a < b) {
+        cout << "A is less than B \n";
+    }
+    else {
+        cout << "A is equal to B \n";
+    }
+}
+
+int main(){
+    cout << result(10, 4) << "\n";
+    ifStatements(10, 20);
     return 0;
 }
 
