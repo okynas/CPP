@@ -79,12 +79,13 @@ void userInput() {
 
     // cout << "Your age is " << age << " years old";
 
-    cout << "Enter your name";
+    cout << "Enter your name: ";
     getline(cin, name);
-    cout << "Hello " << name;
+    cout << "Hello " << name << "\n";
 
 }
 
+<<<<<<< Updated upstream
 void arrays() {
     int luckyNumbers[] = {4,8,16,32,64,128,256,512};
     cout << luckyNumbers[1] << "\n";
@@ -100,6 +101,16 @@ void sayHi(string name, int age) {
 int main(){
     arrays();
     sayHi("Stian Martinsen", 21);
+=======
+double result(int a, int b) {
+    return a * b;
+}
+
+int main()
+{
+    userInput();
+    cout << result(10, 4) << "\n";
+>>>>>>> Stashed changes
     return 0;
 }
 
