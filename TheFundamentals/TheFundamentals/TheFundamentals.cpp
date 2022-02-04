@@ -72,7 +72,7 @@ void workingWithNumbers() {
 }
 
 void userInput() {
-    int age;
+    // int age;
     string name;
     // cout << "Enter your age: ";
     // cin >> age;
@@ -112,9 +112,44 @@ void ifStatements(int a, int b) {
     }
 }
 
+string getDayOfWeek(int dayNum) {
+    string dayName;
+
+    switch (dayNum){
+    case 0:
+        dayName = "Monday";
+        break;
+    case 1:
+        dayName = "Thirsday";
+        break;
+    case 2:
+        dayName = "Wednesday";
+        break;
+    case 3:
+        dayName = "Thursday";
+        break;
+    case 4:
+        dayName = "Friday";
+        break;
+    case 5:
+        dayName = "Saturday";
+        break;
+    case 6:
+        dayName = "Sunday";
+        break;
+    default:
+        dayName = "Invalid Day Number";
+        break;
+    }
+    return dayName;
+}
+
 int main(){
-    cout << result(10, 4) << "\n";
-    ifStatements(10, 20);
+    // cout << result(10, 4) << "\n";
+    // ifStatements(10, 20);
+
+    cout << getDayOfWeek(4) << "\n";
+
     return 0;
 }
 
