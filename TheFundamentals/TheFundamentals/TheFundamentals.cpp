@@ -17,9 +17,21 @@ void symbol() {
 
 }
 
+/*
+Learning variables.
+*/
+void printVariables() {
+    std::string characterName = "Ole-Jorgen";
+    int characterAge = 21;
+    std::cout << "There was a man named " << characterName << "\n";
+    std::cout << "He was " << characterAge << " years old\n";
+    std::cout << "He liked the name " << characterName << "\n";
+    std::cout << "But he did not like the age " << characterName << "\n";
+}
+
 int main()
 {
-    symbol();
+    printVariables();
     return 0;
 }
 
