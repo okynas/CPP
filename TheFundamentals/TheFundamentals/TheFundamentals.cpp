@@ -2,7 +2,10 @@
 //
 
 #include <iostream>
-// using namespace std;
+#include <iostream>
+#include <string>
+
+using namespace std;
 
 
 /*
@@ -10,10 +13,10 @@ drawing a symbol of a triangle
 */
 void symbol() {
 
-    std::cout << "   /|\n";
-    std::cout << "  / |\n";
-    std::cout << " /  |\n"; // dette er det samme som std::cout << " /  |\n";
-    std::cout << "/___|\n";
+    cout << "   /|\n";
+    cout << "  / |\n";
+    cout << " /  |\n"; // dette er det samme som cout << " /  |\n";
+    cout << "/___|\n";
 
 }
 
@@ -21,12 +24,12 @@ void symbol() {
 Learning variables.
 */
 void printVariables() {
-    std::string characterName = "Ole-Jorgen";
+    string characterName = "Ole-Jorgen";
     int characterAge = 21;
-    std::cout << "There was a man named " << characterName << "\n";
-    std::cout << "He was " << characterAge << " years old\n";
-    std::cout << "He liked the name " << characterName << "\n";
-    std::cout << "But he did not like the age " << characterName << "\n";
+    cout << "There was a man named " << characterName << "\n";
+    cout << "He was " << characterAge << " years old\n";
+    cout << "He liked the name " << characterName << "\n";
+    cout << "But he did not like the age " << characterName << "\n";
 }
 
 
@@ -36,13 +39,13 @@ void printVariables() {
 void dataTypes()
 {
     char grade = 'A';
-    std::string phrase = "Giraffe Academy";
+    string phrase = "Giraffe Academy";
     int age = 50;
     double gpa = 2.3;
     bool isMale = true;
 
 
-    std::cout << ( double( age) > gpa);
+    cout << ( double( age) > gpa);
 }
 
 
@@ -52,32 +55,46 @@ void dataTypes()
 void stringManipulations()
 {
 
-    std::string phrase = "Hello world!\n";
-    std::cout << phrase << std::endl;
-    std::cout << phrase.length() << std::endl;
-    std::cout << phrase[0] << std::endl;
+    string phrase = "Hello world!\n";
+    cout << phrase << endl;
+    cout << phrase.length() << endl;
+    cout << phrase[0] << endl;
     phrase[1] = 'B';
-    std::cout << phrase << std::endl;
-    std::cout << phrase.find("Bllo", 1) << std::endl;
+    cout << phrase << endl;
+    cout << phrase.find("Bllo", 1) << endl;
 }
 
 void workingWithNumbers() {
-    std::cout << 5 * 42 << "\n";
-    std::cout << 40 << "\n";
+    cout << 5 * 42 << "\n";
+    cout << 40 << "\n";
 
-    std::cout << 5.5 <<  "\n";
+    cout << 5.5 <<  "\n";
+}
+
+void userInput() {
+    int age;
+    string name;
+    // cout << "Enter your age: ";
+    // cin >> age;
+
+    // cout << "Your age is " << age << " years old";
+
+    cout << "Enter your name";
+    getline(cin, name);
+    cout << "Hello " << name;
+
 }
 
 int main()
 {
-    workingWithNumbers();
+    userInput();
     return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 
-// Tips for Getting Started: 
+// Tips for Getting Started:
 //   1. Use the Solution Explorer window to add/manage files
 //   2. Use the Team Explorer window to connect to source control
 //   3. Use the Output window to see build output and other messages

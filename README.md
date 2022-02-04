@@ -14,7 +14,7 @@ using namespace std;
 // We are now defining the main function; it is the function run when the program starts.
 int main()
 {
-    // Printing a message to the screen using the standard output stream std::cout.
+    // Printing a message to the screen using the standard output stream cout.
     cout << "Hello World!";
 }
 
@@ -27,7 +27,7 @@ int main()
 int main()
 {
     // Print a simple calculation.
-    std::cout << 3 + 2;
+    cout << 3 + 2;
 }
 ```
 
@@ -43,8 +43,8 @@ int main()
     int c = 20;
 
     // Print calculations.
-    std::cout << a-b-c;
-    std::cout << a*b*c;
-    std::cout << a/b/c;
+    cout << a-b-c;
+    cout << a*b*c;
+    cout << a/b/c;
 }
 ```
