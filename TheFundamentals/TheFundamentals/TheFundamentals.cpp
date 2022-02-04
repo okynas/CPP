@@ -85,9 +85,21 @@ void userInput() {
 
 }
 
-int main()
-{
-    userInput();
+void arrays() {
+    int luckyNumbers[] = {4,8,16,32,64,128,256,512};
+    cout << luckyNumbers[1] << "\n";
+
+    luckyNumbers[1] = 22222;
+    cout << luckyNumbers[1] << "\n";
+}
+
+void sayHi(string name, int age) {
+    cout << "Hello, My name is " << name << ", and I am " << age << " years old!" << "\n";
+}
+
+int main(){
+    arrays();
+    sayHi("Stian Martinsen", 21);
     return 0;
 }
 
