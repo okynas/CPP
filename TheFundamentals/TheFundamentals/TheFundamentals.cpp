@@ -82,10 +82,8 @@ void userInput() {
     cout << "Enter your name: ";
     getline(cin, name);
     cout << "Hello " << name << "\n";
-
 }
 
-<<<<<<< Updated upstream
 void arrays() {
     int luckyNumbers[] = {4,8,16,32,64,128,256,512};
     cout << luckyNumbers[1] << "\n";
@@ -95,22 +93,28 @@ void arrays() {
 }
 
 void sayHi(string name, int age) {
-    cout << "Hello, My name is " << name << ", and I am " << age << " years old!" << "\n";
+ cout << "Hello, My name is " << name << ", and I am " << age << " years old!" << "\n";
 }
 
-int main(){
-    arrays();
-    sayHi("Stian Martinsen", 21);
-=======
 double result(int a, int b) {
     return a * b;
 }
 
-int main()
-{
-    userInput();
+void ifStatements(int a, int b) {
+    if (a > b) {
+        cout << "A is greate than B \n";
+    }
+    else if (a < b) {
+        cout << "A is less than B \n";
+    }
+    else {
+        cout << "A is equal to B \n";
+    }
+}
+
+int main(){
     cout << result(10, 4) << "\n";
->>>>>>> Stashed changes
+    ifStatements(10, 20);
     return 0;
 }
 
