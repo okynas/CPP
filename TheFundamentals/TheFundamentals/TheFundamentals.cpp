@@ -113,8 +113,15 @@ void ifStatements(int a, int b) {
 }
 
 int main(){
-    cout << result(10, 4) << "\n";
-    ifStatements(10, 20);
+    /*cout << result(10, 4) << "\n";
+    ifStatements(10, 20);*/
+    int i = 0;
+
+    while (i < 10) {
+        cout << "i: " << i << ": is less than 10 \n";
+        i++;
+    }
+
     return 0;
 }
 
