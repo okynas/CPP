@@ -29,9 +29,25 @@ void printVariables() {
     std::cout << "But he did not like the age " << characterName << "\n";
 }
 
+
+/*
+* List of some of the datatypes!
+*/
+void dataTypes()
+{
+    char grade = 'A';
+    std::string phrase = "Giraffe Academy";
+    int age = 50;
+    double gpa = 2.3;
+    bool isMale = true;
+
+
+    std::cout << ( double( age) > gpa);
+}
+
 int main()
 {
-    printVariables();
+    dataTypes();
     return 0;
 }
 
