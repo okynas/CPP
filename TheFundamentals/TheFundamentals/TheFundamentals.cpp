@@ -149,6 +149,14 @@ int main(){
     // ifStatements(10, 20);
 
     cout << getDayOfWeek(4) << "\n";
+    /*cout << result(10, 4) << "\n";
+    ifStatements(10, 20);*/
+    int i = 0;
+
+    while (i < 10) {
+        cout << "i: " << i << ": is less than 10 \n";
+        i++;
+    }
 
     return 0;
 }
