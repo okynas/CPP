@@ -61,9 +61,16 @@ void stringManipulations()
     std::cout << phrase.find("Bllo", 1) << std::endl;
 }
 
+void workingWithNumbers() {
+    std::cout << 5 * 42 << "\n";
+    std::cout << 40 << "\n";
+
+    std::cout << 5.5 <<  "\n";
+}
+
 int main()
 {
-    stringManipulations();
+    workingWithNumbers();
     return 0;
 }
 
