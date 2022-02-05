@@ -64,13 +64,20 @@ void stringManipulations()
     cout << phrase.find("Bllo", 1) << endl;
 }
 
+/*
+*
+* Learning to work with numbers
+*/
 void workingWithNumbers() {
     cout << 5 * 42 << "\n";
     cout << 40 << "\n";
 
     cout << 5.5 <<  "\n";
 }
-
+/*
+*
+* User input
+*/
 void userInput() {
     // int age;
     string name;
@@ -84,6 +91,10 @@ void userInput() {
     cout << "Hello " << name << "\n";
 }
 
+/*
+* Working with arrays
+*/
+
 void arrays() {
     int luckyNumbers[] = {4,8,16,32,64,128,256,512};
     cout << luckyNumbers[1] << "\n";
@@ -92,14 +103,25 @@ void arrays() {
     cout << luckyNumbers[1] << "\n";
 }
 
+/*
+* Working with strings
+*/
+
 void sayHi(string name, int age) {
  cout << "Hello, My name is " << name << ", and I am " << age << " years old!" << "\n";
 }
 
+/*
+* Basic maths
+*/
 double result(int a, int b) {
     return a * b;
 }
 
+
+/*
+* If statements
+*/
 void ifStatements(int a, int b) {
     if (a > b) {
         cout << "A is greate than B \n";
@@ -111,6 +133,11 @@ void ifStatements(int a, int b) {
         cout << "A is equal to B \n";
     }
 }
+
+
+/*
+* string function that return day of week, by using case
+*/
 
 string getDayOfWeek(int dayNum) {
     string dayName;
@@ -144,6 +171,10 @@ string getDayOfWeek(int dayNum) {
     return dayName;
 }
 
+/*
+* working with while loops
+*/
+
 void div() {
 
     int i = 0;
@@ -152,8 +183,19 @@ void div() {
         cout << "i: " << i << ": is less than 10 \n";
         i++;
     }
+
+    i = 0;
+
+    do {
+        cout << "Hello \n";
+        i++;
+    } while (i < 5);
 }
 
+
+/*
+* Testing while loops with arrays
+*/
 void testingOutLoops() {
     int index = 1;
     while (index <= 5) {
@@ -182,6 +224,10 @@ void testingOutLoops() {
     }
 }
 
+/*
+* Exponential functions
+*/
+
 int power(int baseNum, int powNum) {
     int result = 1;
 
@@ -193,7 +239,9 @@ int power(int baseNum, int powNum) {
 }
 
 
-
+/*
+* How arrays work
+*/
 void Arrays2D(int row, int col) {
 
     const int r = 10, c = 10;
@@ -216,6 +264,10 @@ void Arrays2D(int row, int col) {
 }
 
 
+/*
+* Trying on dynamic arrays, with pointers.
+*/
+
 void Arrays2D_2(int row, int col) {
     //allocate the array
     int** arr = new int* [row];
@@ -231,6 +283,74 @@ void Arrays2D_2(int row, int col) {
     delete[] arr;
 }
 
+/*
+* How pointers works
+*/
+
+void ptr() {
+    int age = 19;
+    int* pAge = &age;
+    double gpa = 2.7;
+    string name =  "Stian";
+
+    cout << pAge << "\n";
+
+    // de-referencing a pointer value
+    cout << *pAge << "\n";
+
+    int numbers[] = { 1,2,3,4,5,6,7,8,9,10 };
+    cout << numbers << "\n";
+    cout << &numbers << "\n";
+    cout << numbers + 1 << "\n";
+    cout << *(numbers + 1) << "\n";
+    cout << *(&numbers + 1) << "\n";
+    cout << *(&numbers + 1) - numbers << "\n";
+
+    // int arrSize2 = *(&numbers + 1) - numbers;
+    // int arrSize2 = *(&numbers + 1) - numbers;
+}
+
+class Entertainment {
+private:
+    int publishYear;
+public:
+    Entertainment(int py) {
+        publishYear = py;
+    }
+
+    bool isNew() {
+        if (publishYear < 2) {
+            return true;
+        }
+        return false;
+    }
+};
+
+class Book : public Entertainment {
+private:
+    string title;
+    string author;
+
+    int pages;
+
+public:
+
+    Book(string t, string a, int p, int py) : Entertainment(py) {
+        title = t;
+        author = a;
+        pages = p;
+    }
+
+    string getTitle() {
+        return title;
+    }
+
+    void setTitle(string t) {
+        title = t;
+    }
+};
+
+
 
 int main(){
     // cout << result(10, 4) << "\n";
@@ -241,7 +361,14 @@ int main(){
 
     // cout << power(3, 4); 3^4=81
 
-    Arrays2D_2(2,2);
+    // Arrays2D_2(2,2);
+
+    // ptr();
+
+    Book bok1 = Book("Title", "Stan", 200, 200);
+
+    cout << bok1.isNew();
+
 
     return 0;
 }
