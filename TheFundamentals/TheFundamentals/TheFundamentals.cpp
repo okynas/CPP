@@ -289,10 +289,25 @@ void Arrays2D_2(int row, int col) {
 
 void ptr() {
     int age = 19;
+    int* pAge = &age;
     double gpa = 2.7;
     string name =  "Stian";
 
-    cout << &age;
+    cout << pAge << "\n";
+    
+    // de-referencing a pointer value 
+    cout << *pAge << "\n";
+
+    int numbers[] = { 1,2,3,4,5,6,7,8,9,10 };
+    cout << numbers << "\n";
+    cout << &numbers << "\n";
+    cout << numbers + 1 << "\n";
+    cout << *(numbers + 1) << "\n";
+    cout << *(&numbers + 1) << "\n";
+    cout << *(&numbers + 1) - numbers << "\n";
+
+    // int arrSize2 = *(&numbers + 1) - numbers;
+    // int arrSize2 = *(&numbers + 1) - numbers;
 }
 
 
