@@ -231,19 +231,34 @@ void Arrays2D_2(int row, int col) {
     delete[] arr;
 }
 
-class Book {
+class Entertainment {
+private:
+    int publishYear;
+public:
+    Entertainment(int py) {
+        publishYear = py;
+    }
+
+    bool isNew() {
+        if (publishYear < 2) {
+            return true;
+        }
+        return false;
+    }
+};
+
+class Book : public Entertainment {
 private: 
     string title;
     string author;
-    int publishYear;
+    
     int pages;
 
 public:
 
-    Book(string t, string a, int py, int p) {
+    Book(string t, string a, int p, int py) : Entertainment(py) {
         title = t;
         author = a;
-        publishYear = py;
         pages = p;
     }
 
@@ -253,13 +268,6 @@ public:
 
     void setTitle(string t) {
         title = t;
-    }
-
-    bool isNew() {
-        if (publishYear < 2) {
-            return true;
-        }
-        return false;
     }
 };
 
