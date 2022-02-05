@@ -231,6 +231,31 @@ void Arrays2D_2(int row, int col) {
     delete[] arr;
 }
 
+class Book {
+private: 
+    string title;
+    string author;
+    int publishYear;
+    int pages;
+
+public:
+
+    Book(string t, string a, int py, int p) {
+        title = t;
+        author = a;
+        publishYear = py;
+        pages = p;
+    }
+
+    string getTitle() {
+        return title;
+    }
+
+    void setTitle(string t) {
+        title = t;
+    }
+};
+
 
 int main(){
     // cout << result(10, 4) << "\n";
@@ -241,7 +266,9 @@ int main(){
 
     // cout << power(3, 4); 3^4=81
 
-    Arrays2D_2(2,2);
+    // Arrays2D_2(2,2);
+
+    Book bok1 = Book("Title", "Stan", 200, 200);
 
     return 0;
 }
