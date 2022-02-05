@@ -157,6 +157,97 @@ int main(){
         cout << "i: " << i << ": is less than 10 \n";
         i++;
     }
+<<<<<<< Updated upstream
+=======
+}
+
+void testingOutLoops() {
+    int index = 1;
+    while (index <= 5) {
+        cout << index << endl;
+        index++;
+    }
+
+    // for loops
+
+    int numbers[] = {1,2,3,4,5,6,7,8,9,10};
+    int arrSize = sizeof(numbers) / sizeof(numbers[0]);
+    
+    
+    /*
+    * 
+    * (&numbers + 1) points to the memory address right after the end of the array
+    * 
+    * *(&numbers + 1) casts the adress above to en int *. 
+    * And by subtractign the adress of the start from the adress at the end, it gives us the length.
+    * 
+    */
+    int arrSize2 = *(&numbers + 1) - numbers;
+
+    for (int i = 0; i < arrSize2; i++) {
+        cout << numbers[i] << endl;
+    }
+}
+
+int power(int baseNum, int powNum) {
+    int result = 1;
+
+    for (int i = 1; i <= powNum; i++) {
+        result *= baseNum;
+    }
+
+    return result;
+}
+
+
+
+void Arrays2D(int row, int col) {
+
+    const int r = 10, c = 10;
+
+    int numberGrid[r][c];
+
+    for (int x = 0; x < r; x++) {
+        for (int y = 0; y < c; y++) {
+            numberGrid[x][y] = 1;
+        }
+    }
+    
+
+    for (int x = 0; x < row; x++) {
+        for (int y = 0; y < col; y++) {
+            cout << numberGrid[x][y] << ", ";
+        }
+        cout << "\n";
+    }
+}
+
+
+void Arrays2D_2(int row, int col) {
+    //allocate the array
+    int** arr = new int* [row];
+    for (int i = 0; i < row; i++) {
+        arr[i] = new int[col];
+    }
+
+    // use the array
+
+    //deallocate the array
+    for (int i = 0; i < row; i++)
+        delete[] arr[i];
+    delete[] arr;
+}
+
+int main(){
+    // cout << result(10, 4) << "\n";
+    // ifStatements(10, 20);
+    // cout << getDayOfWeek(4) << "\n";
+
+    // testingOutLoops();
+    // cout << power(3, 4); 3^4=81
+
+    Arrays2D_2(2,2);
+>>>>>>> Stashed changes
 
     return 0;
 }
