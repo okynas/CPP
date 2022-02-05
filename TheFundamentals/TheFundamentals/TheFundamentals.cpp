@@ -182,12 +182,23 @@ void testingOutLoops() {
     }
 }
 
+int power(int baseNum, int powNum) {
+    int result = 1;
+
+    for (int i = 1; i <= powNum; i++) {
+        result *= baseNum;
+    }
+
+    return result;
+}
+
 int main(){
     // cout << result(10, 4) << "\n";
     // ifStatements(10, 20);
     // cout << getDayOfWeek(4) << "\n";
 
-    testingOutLoops();
+    // testingOutLoops();
+    cout << power(3, 4);
 
     return 0;
 }
