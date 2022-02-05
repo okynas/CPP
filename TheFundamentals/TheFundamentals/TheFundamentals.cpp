@@ -294,8 +294,8 @@ void ptr() {
     string name =  "Stian";
 
     cout << pAge << "\n";
-    
-    // de-referencing a pointer value 
+
+    // de-referencing a pointer value
     cout << *pAge << "\n";
 
     int numbers[] = { 1,2,3,4,5,6,7,8,9,10 };
@@ -310,6 +310,47 @@ void ptr() {
     // int arrSize2 = *(&numbers + 1) - numbers;
 }
 
+class Entertainment {
+private:
+    int publishYear;
+public:
+    Entertainment(int py) {
+        publishYear = py;
+    }
+
+    bool isNew() {
+        if (publishYear < 2) {
+            return true;
+        }
+        return false;
+    }
+};
+
+class Book : public Entertainment {
+private:
+    string title;
+    string author;
+
+    int pages;
+
+public:
+
+    Book(string t, string a, int p, int py) : Entertainment(py) {
+        title = t;
+        author = a;
+        pages = p;
+    }
+
+    string getTitle() {
+        return title;
+    }
+
+    void setTitle(string t) {
+        title = t;
+    }
+};
+
+
 
 int main(){
     // cout << result(10, 4) << "\n";
@@ -321,7 +362,13 @@ int main(){
     // cout << power(3, 4); 3^4=81
 
     // Arrays2D_2(2,2);
-    ptr();
+
+    // ptr();
+
+    Book bok1 = Book("Title", "Stan", 200, 200);
+
+    cout << bok1.isNew();
+
 
     return 0;
 }
