@@ -254,6 +254,13 @@ public:
     void setTitle(string t) {
         title = t;
     }
+
+    bool isNew() {
+        if (publishYear < 2) {
+            return true;
+        }
+        return false;
+    }
 };
 
 
@@ -269,6 +276,8 @@ int main(){
     // Arrays2D_2(2,2);
 
     Book bok1 = Book("Title", "Stan", 200, 200);
+
+    cout << bok1.isNew();
 
     return 0;
 }
