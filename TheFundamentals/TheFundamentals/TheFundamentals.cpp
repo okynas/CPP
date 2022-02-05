@@ -144,19 +144,50 @@ string getDayOfWeek(int dayNum) {
     return dayName;
 }
 
-int main(){
-    // cout << result(10, 4) << "\n";
-    // ifStatements(10, 20);
-
-    cout << getDayOfWeek(4) << "\n";
-    /*cout << result(10, 4) << "\n";
-    ifStatements(10, 20);*/
+void div() {
+    
     int i = 0;
 
     while (i < 10) {
         cout << "i: " << i << ": is less than 10 \n";
         i++;
     }
+}
+
+void testingOutLoops() {
+    int index = 1;
+    while (index <= 5) {
+        cout << index << endl;
+        index++;
+    }
+
+    // for loops
+
+    int numbers[] = {1,2,3,4,5,6,7,8,9,10};
+    int arrSize = sizeof(numbers) / sizeof(numbers[0]);
+    
+    
+    /*
+    * 
+    * (&numbers + 1) points to the memory address right after the end of the array
+    * 
+    * *(&numbers + 1) casts the adress above to en int *. 
+    * And by subtractign the adress of the start from the adress at the end, it gives us the length.
+    * 
+    */
+    int arrSize2 = *(&numbers + 1) - numbers;
+
+    for (int i = 0; i < arrSize2; i++) {
+        cout << numbers[i] << endl;
+    }
+}
+
+int main(){
+    // cout << result(10, 4) << "\n";
+    // ifStatements(10, 20);
+    // cout << getDayOfWeek(4) << "\n";
+
+    testingOutLoops();
 
     return 0;
 }
