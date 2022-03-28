@@ -3,6 +3,9 @@
 ### Where its learned from:
 Learning C++ from a beginner 10H+ [youtube course / video](https://www.youtube.com/watch?v=GQp1zzTwrIg&list=WL&index=24&t=23s)
 
+### Progress:
+00:21:00 / 10:27:40
+
 ### Theory:
 
 C++ is:
