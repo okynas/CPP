@@ -4,7 +4,7 @@
 Learning C++ from a beginner 10H+ [youtube course / video](https://www.youtube.com/watch?v=GQp1zzTwrIg&list=WL&index=24&t=23s)
 
 ### Progress:
-00:50:36 / 10:27:40
+00:54:33 / 10:27:40
 
 ### Theory:
 

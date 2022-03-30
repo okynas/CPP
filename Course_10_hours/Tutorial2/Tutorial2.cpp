@@ -15,7 +15,7 @@ int main()
     // naming variables:
 
     /*
-    
+
     valid:
 
     char s = 'a';
@@ -35,9 +35,14 @@ int main()
 
     */
     char character = 'a';
-    
+
+    // Data-types in c++:
+
+    int yearOfBirth = 2000;
+    char gender = 'M';
+    bool isOlderThan18 = true;
 
     system("pause>0");
-    
+
 }
 
