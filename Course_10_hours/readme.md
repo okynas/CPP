@@ -4,7 +4,7 @@
 Learning C++ from a beginner 10H+ [youtube course / video](https://www.youtube.com/watch?v=GQp1zzTwrIg&list=WL&index=24&t=23s)
 
 ### Progress:
-00:54:33 / 10:27:40
+01:01:55 / 10:27:40
 
 ### Theory:
 
@@ -20,3 +20,5 @@ C++ was created:
 Source code compiles to machine code.
 Source code is what you / i write, machine-code is code that is compiled and the pc understands.
 
+#### Datatypes:
+![Table of datatypes](data_types.png)

@@ -5,12 +5,12 @@ using namespace std;
 
 int main()
 {
-    float annualSalary;
+    /*float annualSalary;
     cout << "Please enter your annual sallary: ";
     cin >> annualSalary;
     float monthlySalary = annualSalary / 12;
     cout << "Your montyly salary is " << monthlySalary << endl;
-    cout << "In 10 years , you will have" << annualSalary * 10;
+    cout << "In 10 years , you will have " << annualSalary * 10 << endl;*/
 
     // naming variables:
 
@@ -41,8 +41,17 @@ int main()
     int yearOfBirth = 2000;
     char gender = 'M';
     bool isOlderThan18 = true;
+    float averageGrade = 4.5;
+    double balance = 456789456;
 
+    cout << "Size of int is " << sizeof(int) << " bytes\n";
+    cout << "Int min value is " << INT_MIN << endl;
+    cout << "Int max value is " << INT_MAX << endl;
+    cout << "The size of unsigned int is " << sizeof(unsigned int) << "bytes\n";
+    cout << "UInt max value it " << UINT_MAX << endl;
     system("pause>0");
 
 }
 
+
+ 
