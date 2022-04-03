@@ -40,3 +40,6 @@ Source code is what you / i write, machine-code is code that is compiled and the
 6. 0 (false)
 7. 10
 8. 5
+
+
+#### How to:
