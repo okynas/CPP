@@ -34,11 +34,11 @@ int main()
     char mellom rom = 'a';
 
     */
-    char character = 'a';
+    //char character = 'a';
 
     // Data-types in c++:
 
-    int yearOfBirth = 2000;
+    /*int yearOfBirth = 2000;
     char gender = 'M';
     bool isOlderThan18 = true;
     float averageGrade = 4.5;
@@ -48,7 +48,12 @@ int main()
     cout << "Int min value is " << INT_MIN << endl;
     cout << "Int max value is " << INT_MAX << endl;
     cout << "The size of unsigned int is " << sizeof(unsigned int) << "bytes\n";
-    cout << "UInt max value it " << UINT_MAX << endl;
+    cout << "UInt max value it " << UINT_MAX << endl;*/
+
+    // data type overflow
+    int intMax = INT_MAX;
+    cout << intMax << endl; // 2147483647
+    cout << intMax + 1; // -2147483648
     system("pause>0");
 
 }
