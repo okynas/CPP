@@ -7,4 +7,5 @@ public:
 	Plane(int idx) {
 		id = idx;
 	}
+	int getId();
 };

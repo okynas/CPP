@@ -5,7 +5,9 @@ void Queue::enqueue(Plane value) {
 }
 
 Plane Queue::dequeue() {
-	return NULL;
+	Plane plane_to_remove = q.front();
+	q.erase(q.begin());
+	return plane_to_remove;
 }
 
 Plane Queue::first() {

@@ -5,11 +5,13 @@
 
 #include <iostream>
 #include <random>
-#include <format>
 
 using namespace std;
 
-const int MAX_QUEUE_SIZE = 0;
+const int MAX_QUEUE_SIZE = 10;
+int NUM_PLANES_ARRIVAL = 0;
+int NUM_PLANES_DEPARTURE = 0;
+int NUM_PLANES_REJECTED = 0;
 
 /*
 ALGORITME:
@@ -109,7 +111,7 @@ Gj.snitt. ventetid, avgang   : 1.33333 tidsenheter.
 
 int main()
 {
-    int time;
+    int time, plane_index = 0;
     float arrival, departure;
 
     default_random_engine generator;
@@ -122,6 +124,7 @@ int main()
     cin >> arrival;
     LOG("Forventet antall avganger pr. tidsenhet ?    :");
     cin >> departure;
+    LOG("");
 
     // Initier begge køene til å være tomme
     Queue arrivals_queue;
@@ -133,48 +136,76 @@ int main()
     // For hver tidssteg i simuleringen
     for (int i = 0; i < time; i++) {
         // Trekk et tilfeldig antall nye fly som kommer for å lande
-        int arrival_count = arrival_distribution(generator);
+        int arrival_count = (int)arrival_distribution(generator);
 
         //For hvert nytt fly som kommer for å lande
         for (int j = 0; j < arrival_count; j++) { 
             // Hvis landingskøen er full
             if (arrivals_queue.size() == MAX_QUEUE_SIZE) {
                 //Avvis det nye flyet(henvis til annen flyplass)
-                LOG("Fly" << j << "ble avvist!");
+                LOG("Fly" << plane_index << " ble avvist!");
+                NUM_PLANES_REJECTED++;
             }
             // ellers, Sett det nye flyet sist i landingskøen
             else {
-                Plane arrival_plane = Plane(j);
+                Plane arrival_plane = Plane(plane_index);
                 arrivals_queue.enqueue(arrival_plane);
+                LOG("Fly" << arrival_plane.getId() << " klar for landing");
+                NUM_PLANES_ARRIVAL++;
             }
+            plane_index++;
         }
 
         // Trekk et tilfeldig antall nye fly som kommer for å ta av
-        int departure_count = departure_distribution(generator);
+        int departure_count = (int)departure_distribution(generator);
         
         //  For hvert nytt fly som kommer for å ta av
         for (int j = 0; j < departure_count; j++) {
             // Hvis avgangskøen er full
             if (departures_queue.size() == MAX_QUEUE_SIZE) {
                 // Avvis det nye flyet(avgang må prøves senere)
-                LOG("Fly" << j << "ble avvist!");
+                LOG("Fly" << plane_index << " ble avvist!");
+                NUM_PLANES_REJECTED++;
             }
             else {
                 // ellers Sett det nye flyet sist i avgangskøen
-                Plane departure_plane = Plane(j);
+                Plane departure_plane = Plane(plane_index);
                 departures_queue.enqueue(departure_plane);
+                LOG("Fly" << departure_plane.getId() << " klar for å ta av");
+                NUM_PLANES_DEPARTURE++;
             }
+            plane_index++;
         }
-
+        
         // Hvis landingskøen ikke er tom
+        if (!departures_queue.isEmpty()) {
             // Ta ut første fly i landingskøen og la det få lande
-         // ellers hvis avgangskøen ikke er tom
+            Plane first_plane = departures_queue.dequeue();
+            LOG("Fly" << first_plane.getId() << " tok av!");
+        }
+        // ellers hvis avgangskøen ikke er tom
+        else if (!arrivals_queue.isEmpty()) {
             // Ta ut første fly i avgangskøen og la det få ta av
-         // ellers Flyplassen er tom for fly
+            Plane first_plane = arrivals_queue.dequeue();
+            LOG("Fly" << first_plane.getId() << "  landet!");
+        }
+        else {
+            // ellers Flyplassen er tom for fly
+            LOG("Flyplassen er tom for fly!");
+        }
        
     }
 
-    // Skriv til slutt ut resultater som gj.snittlig ventetid etc.
-    
+    int total_number_of_planes = plane_index;
+
+    // Skriv til slutt ut resultater;
+    LOG("");
+    LOG("Simuleringen ferdig etter \t: " << time << " tidsenheter.");
+    LOG("Total antall fly behandlet \t :" << total_number_of_planes);
+    LOG("Antall fly landet \t :" << NUM_PLANES_ARRIVAL);
+    LOG("Antall fly landet \t :" << NUM_PLANES_DEPARTURE);
+    LOG("Antall fly avvist\t :" << NUM_PLANES_REJECTED);
+    LOG("Antall fly klare for landing\t :" << arrivals_queue.size());
+    LOG("Antall fly klare for å ta av\t :" << departures_queue.size());    
 }
 
