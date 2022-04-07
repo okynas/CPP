@@ -3,16 +3,14 @@
 
 using namespace std;
 
-std::string Person::getName()
-{
-	return first_name + " " + last_name;
-}
+//std::string Person::getName()
+//{
+//	return name;
+//}
 
 Person::~Person() {
 	std::cout << "Person destroyed!" << std::endl;
 }
-
-std::string Person::spicies = "Humanity";
 
 enum Person::e_gender {
 	Male = 0,
