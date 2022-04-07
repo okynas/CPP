@@ -7,9 +7,11 @@
 
 int main()
 {
-    Person stian = Person("Stian", "Martinsen", 3);
+    Person stian = Person("Stian", "Martinsen", 3, 0);
     LOG(stian.getName());
+    LOG(stian.spicies);
 }
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
